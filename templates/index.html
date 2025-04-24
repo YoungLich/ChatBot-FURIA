@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>CHATBOT - FURIA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="icon" href="{{ url_for('static', filename='image/mini-logo.png') }}">
+</head>
+<body>
+  <div class="background">
+    <!-- Logo da FURIA no topo -->
+    <div class="logo-furia">
+      <img src="{{ url_for('static', filename='image/IA-Logo.png') }}" alt="FURIA IA Logo" id="logo-ia">
+    </div>
+
+    <!-- Container do chat -->
+    <div class="chat-container">
+      <!-- Histórico de mensagens -->
+      <div class="chat-history" id="chatHistory">
+        <!-- Mensagens serão inseridas aqui pelo JS -->
+      </div>
+
+      <!-- Campo de input -->
+      <div class="user-input">
+        <input type="text" id="userInput" placeholder="Digite sua pergunta para a IA...">
+        <button onclick="enviarMensagem()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
